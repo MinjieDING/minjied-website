@@ -1,0 +1,47 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="92" x2="822" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6EEE5" />
+      <stop offset="1" stop-color="#E6F0E3" />
+    </linearGradient>
+    <linearGradient id="card" x1="180" y1="154" x2="788" y2="484" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F9FBF5" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7D9D57" />
+      <stop offset="1" stop-color="#A55A57" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <circle cx="172" cy="122" r="74" fill="#E9E3D7"/>
+  <circle cx="802" cy="526" r="88" fill="#E6EFE2"/>
+
+  <rect x="166" y="150" width="628" height="340" rx="26" fill="url(#card)" stroke="#DCE5D5" stroke-width="3"/>
+
+  <rect x="214" y="198" width="278" height="244" rx="18" fill="#EFF4EA"/>
+  <path d="M323 259C323 226.415 349.415 200 382 200C414.585 200 441 226.415 441 259V285H323V259Z" fill="#7D9D57" fill-opacity="0.18"/>
+  <circle cx="382" cy="248" r="42" fill="#FFFFFF" stroke="#CFE0C5" stroke-width="4"/>
+  <path d="M314 398C324 348 349 322 382 322C415 322 440 348 450 398" stroke="#A55A57" stroke-width="14" stroke-linecap="round"/>
+  <rect x="260" y="306" width="244" height="90" rx="16" fill="#FFFFFF" stroke="#D5E1CC" stroke-width="4"/>
+  <path d="M286 350H477" stroke="#E2ECDD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M286 373H442" stroke="#EDF3E8" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="537" y="198" width="210" height="244" rx="18" fill="#FFFFFF" stroke="#D9E5D0" stroke-width="3"/>
+  <rect x="569" y="238" width="147" height="18" rx="9" fill="#E8F0E2"/>
+  <rect x="569" y="272" width="110" height="18" rx="9" fill="#EEF4EA"/>
+  <rect x="569" y="334" width="40" height="72" rx="10" fill="#DDEACF"/>
+  <rect x="621" y="310" width="40" height="96" rx="10" fill="#BFD5A4"/>
+  <rect x="673" y="284" width="40" height="122" rx="10" fill="url(#accent)"/>
+  <path d="M568 406H717" stroke="#DCE6D4" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="593" cy="188" r="16" fill="#7D9D57" fill-opacity="0.18"/>
+  <circle cx="692" cy="222" r="12" fill="#A55A57" fill-opacity="0.18"/>
+
+  <rect x="230" y="104" width="156" height="28" rx="14" fill="#314234" fill-opacity="0.08"/>
+  <rect x="402" y="104" width="126" height="28" rx="14" fill="#7D9D57" fill-opacity="0.12"/>
+  <rect x="546" y="104" width="174" height="28" rx="14" fill="#A55A57" fill-opacity="0.1"/>
+
+  <text x="220" y="552" fill="#314234" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">Rider Survey Project</text>
+  <text x="220" y="590" fill="#5A6558" font-family="Avenir Next, Segoe UI, sans-serif" font-size="24">Discount rates, MPC, and large-scale rider questionnaires</text>
+</svg>

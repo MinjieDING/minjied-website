@@ -1,0 +1,51 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="830" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F0E6" />
+      <stop offset="1" stop-color="#E6EEDC" />
+    </linearGradient>
+    <linearGradient id="panel" x1="220" y1="210" x2="720" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F7FAF2" />
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7D9D57" />
+      <stop offset="1" stop-color="#5F7F3E" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <circle cx="787" cy="131" r="72" fill="#E6DCC9"/>
+  <circle cx="145" cy="516" r="96" fill="#E9F0E1"/>
+
+  <rect x="169" y="146" width="622" height="348" rx="24" fill="url(#panel)" stroke="#D8E1D1" stroke-width="3"/>
+
+  <rect x="223" y="200" width="286" height="240" rx="18" fill="#EEF2E8"/>
+  <path d="M246 315L367 228L488 315" stroke="#A55A57" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="284" y="309" width="166" height="96" rx="10" fill="#FFFFFF" stroke="#C8D6BF" stroke-width="4"/>
+  <rect x="354" y="342" width="32" height="63" rx="6" fill="#D7E6CA"/>
+  <rect x="305" y="332" width="31" height="28" rx="5" fill="#E8F0DE"/>
+  <rect x="403" y="332" width="31" height="28" rx="5" fill="#E8F0DE"/>
+  <circle cx="283" cy="260" r="13" fill="#7D9D57" fill-opacity="0.15"/>
+  <circle cx="459" cy="259" r="13" fill="#7D9D57" fill-opacity="0.15"/>
+
+  <rect x="548" y="200" width="182" height="240" rx="18" fill="#FFFFFF" stroke="#D9E4D0" stroke-width="3"/>
+  <path d="M580 391L618 345L654 360L694 284" stroke="url(#chart)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="580" cy="391" r="8" fill="#5F7F3E"/>
+  <circle cx="618" cy="345" r="8" fill="#5F7F3E"/>
+  <circle cx="654" cy="360" r="8" fill="#5F7F3E"/>
+  <circle cx="694" cy="284" r="8" fill="#5F7F3E"/>
+  <path d="M580 249H691" stroke="#DDE8D3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M580 274H660" stroke="#E7EFE0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M580 414H666" stroke="#DDE8D3" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="219" y="106" width="186" height="30" rx="15" fill="#314234" fill-opacity="0.08"/>
+  <rect x="421" y="106" width="112" height="30" rx="15" fill="#7D9D57" fill-opacity="0.14"/>
+  <rect x="548" y="106" width="144" height="30" rx="15" fill="#A55A57" fill-opacity="0.11"/>
+
+  <text x="224" y="554" fill="#314234" font-family="Avenir Next, Segoe UI, sans-serif" font-size="36" font-weight="700">Housing Data Pipeline</text>
+  <text x="224" y="586" fill="#5A6558" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">
+    <tspan x="224" dy="0">Transaction records, structured export,</tspan>
+    <tspan x="224" dy="28">and research-ready workflow</tspan>
+  </text>
+</svg>

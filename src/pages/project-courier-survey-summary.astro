@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Courier Survey Descriptive Statistics"
+	description="Descriptive statistics from the food delivery courier survey project."
+>
+	<main class="summary-page">
+		<div class="summary-shell">
+			<header class="summary-header">
+				<h1>Descriptive Statistics</h1>
+				<p>Food delivery courier survey project snapshot.</p>
+			</header>
+			<figure class="summary-figure">
+				<img
+					src="/project-courier-survey-summary.png"
+					alt="Descriptive statistics for the food delivery courier survey project"
+				/>
+			</figure>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.summary-page {
+		padding: 1.5rem 1.2rem 3rem;
+	}
+
+	.summary-shell {
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+
+	.summary-header {
+		margin-bottom: 1.25rem;
+	}
+
+	.summary-header h1 {
+		margin: 0 0 0.5rem;
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		font-size: clamp(2rem, 4vw, 2.8rem);
+		color: #314234;
+	}
+
+	.summary-header p {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.8;
+		color: #465045;
+	}
+
+	.summary-figure {
+		margin: 0;
+		padding: 1rem;
+		border: 1px solid #dfe5db;
+		border-radius: 0.5rem;
+		background: #ffffff;
+	}
+
+	.summary-figure img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 0.25rem;
+	}
+
+	@media (max-width: 640px) {
+		.summary-page {
+			padding-left: 0.9rem;
+			padding-right: 0.9rem;
+		}
+
+		.summary-figure {
+			padding: 0.7rem;
+		}
+	}
+</style>

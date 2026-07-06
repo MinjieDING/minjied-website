@@ -1,0 +1,48 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="88" x2="828" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5EEE4" />
+      <stop offset="1" stop-color="#E6EFE1" />
+    </linearGradient>
+    <linearGradient id="panel" x1="176" y1="154" x2="788" y2="482" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F8FBF4" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7D9D57" />
+      <stop offset="1" stop-color="#5F7F3E" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <circle cx="160" cy="128" r="72" fill="#E7E0D5"/>
+  <circle cx="804" cy="520" r="88" fill="#E5EFE0"/>
+
+  <rect x="168" y="150" width="624" height="340" rx="26" fill="url(#panel)" stroke="#DCE4D5" stroke-width="3"/>
+
+  <rect x="216" y="198" width="286" height="244" rx="18" fill="#EEF3E8"/>
+  <path d="M240 316L360 230L478 316" stroke="#A55A57" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="282" y="308" width="154" height="98" rx="12" fill="#FFFFFF" stroke="#CEDCC3" stroke-width="4"/>
+  <rect x="346" y="342" width="28" height="64" rx="6" fill="#D7E6CA"/>
+  <circle cx="262" cy="258" r="14" fill="#7D9D57" fill-opacity="0.16"/>
+  <circle cx="452" cy="258" r="14" fill="#7D9D57" fill-opacity="0.16"/>
+
+  <rect x="540" y="198" width="208" height="244" rx="18" fill="#FFFFFF" stroke="#D8E4D0" stroke-width="3"/>
+  <path d="M574 396L612 362L648 326L688 270" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="574" cy="396" r="8" fill="#5F7F3E"/>
+  <circle cx="612" cy="362" r="8" fill="#5F7F3E"/>
+  <circle cx="648" cy="326" r="8" fill="#5F7F3E"/>
+  <circle cx="688" cy="270" r="8" fill="#5F7F3E"/>
+  <path d="M574 406H710" stroke="#DCE7D3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M574 250H710" stroke="#E7EFE0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M634 406V246" stroke="#E7EFE0" stroke-width="6" stroke-dasharray="10 10"/>
+  <rect x="596" y="286" width="56" height="88" rx="12" fill="#D8E7CB"/>
+  <rect x="662" y="254" width="38" height="120" rx="12" fill="#BFD5A4"/>
+
+  <rect x="222" y="104" width="172" height="28" rx="14" fill="#314234" fill-opacity="0.08"/>
+  <rect x="408" y="104" width="126" height="28" rx="14" fill="#7D9D57" fill-opacity="0.12"/>
+  <rect x="550" y="104" width="146" height="28" rx="14" fill="#A55A57" fill-opacity="0.10"/>
+
+  <text x="220" y="552" fill="#314234" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">Asset Thresholds and Consumption</text>
+  <text x="220" y="590" fill="#5A6558" font-family="Avenir Next, Segoe UI, sans-serif" font-size="24">Housing thresholds, MPC, and household policy transmission</text>
+</svg>

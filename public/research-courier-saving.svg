@@ -1,0 +1,48 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="116" y1="90" x2="836" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6EDE4" />
+      <stop offset="1" stop-color="#E6F0E3" />
+    </linearGradient>
+    <linearGradient id="card" x1="176" y1="154" x2="790" y2="484" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F9FBF5" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7D9D57" />
+      <stop offset="1" stop-color="#A55A57" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <circle cx="174" cy="122" r="74" fill="#E9E2D6"/>
+  <circle cx="804" cy="522" r="88" fill="#E6EFE2"/>
+
+  <rect x="166" y="150" width="628" height="340" rx="26" fill="url(#card)" stroke="#DCE5D5" stroke-width="3"/>
+
+  <rect x="214" y="198" width="278" height="244" rx="18" fill="#EFF4EA"/>
+  <circle cx="356" cy="248" r="42" fill="#FFFFFF" stroke="#D1DFC8" stroke-width="4"/>
+  <path d="M307 398C318 348 342 322 376 322C410 322 436 348 446 398" stroke="#A55A57" stroke-width="14" stroke-linecap="round"/>
+  <rect x="258" y="304" width="236" height="94" rx="16" fill="#FFFFFF" stroke="#D6E1CD" stroke-width="4"/>
+  <path d="M282 348H470" stroke="#E4EDDd" stroke-width="8" stroke-linecap="round"/>
+  <path d="M282 372H434" stroke="#EEF4EA" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="428" cy="242" r="18" fill="#7D9D57" fill-opacity="0.18"/>
+  <path d="M428 235V249" stroke="#7D9D57" stroke-width="4" stroke-linecap="round"/>
+  <path d="M421 242H435" stroke="#7D9D57" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="534" y="198" width="214" height="244" rx="18" fill="#FFFFFF" stroke="#D9E5D0" stroke-width="3"/>
+  <rect x="566" y="238" width="148" height="18" rx="9" fill="#E8F0E2"/>
+  <rect x="566" y="272" width="110" height="18" rx="9" fill="#EEF4EA"/>
+  <rect x="570" y="340" width="42" height="66" rx="10" fill="#DDEACF"/>
+  <rect x="624" y="314" width="42" height="92" rx="10" fill="#BFD5A4"/>
+  <rect x="678" y="286" width="42" height="120" rx="10" fill="url(#accent)"/>
+  <path d="M570 406H720" stroke="#DCE6D4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M590 214L704 398" stroke="#E9E2D6" stroke-width="6" stroke-dasharray="10 10"/>
+
+  <rect x="230" y="104" width="164" height="28" rx="14" fill="#314234" fill-opacity="0.08"/>
+  <rect x="408" y="104" width="126" height="28" rx="14" fill="#7D9D57" fill-opacity="0.12"/>
+  <rect x="548" y="104" width="172" height="28" rx="14" fill="#A55A57" fill-opacity="0.10"/>
+
+  <text x="220" y="552" fill="#314234" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">Target Saving among Riders</text>
+  <text x="220" y="590" fill="#5A6558" font-family="Avenir Next, Segoe UI, sans-serif" font-size="24">Survey evidence on MPC, liquidity stress, and marriage goals</text>
+</svg>

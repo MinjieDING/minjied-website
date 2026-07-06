@@ -1,11 +1,1106 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const researchAreas = [
+	{
+		title: 'Theory-Empirics Gap',
+		id: 'research-family-mpc',
+		shortTitle: 'MPC heterogeneity among households with asset threshold',
+		title: 'Optimal Consumption under Asset Thresholds: Evidence and a Threshold HANK Model',
+		description:
+			'Uses Chinese household data and a HANK framework to study how housing, marriage, hukou, and education thresholds reshape consumption, saving, and monetary policy transmission.',
+		imageSrc: '/Paper1_picture.png',
+		imageAlt: 'Illustration of a house and threshold chart for asset-threshold consumption research',
+		items: [
+			'Estimates household MPC from CFPS data and finds a U-shaped pattern over income and assets rather than a monotonic decline',
+			'Uses cross-city down-payment policy variation in DID and DDD designs to identify the consumption effects of tighter thresholds',
+			'Builds a threshold HANK model in which near-threshold households save more aggressively, weakening immediate stimulus but making monetary and fiscal effects more persistent over time',
+		],
+	},
+	{
+		id: 'research-courier-mpc',
+		shortTitle: 'MPC heterogeneity among food delivery riders',
+		title: 'Target Saving and MPC among Food Delivery Riders',
+		description:
+			'Uses original survey data on food delivery riders to study how time preference (patience), liquidity stress, and marriage-related target saving jointly shape consumption behavior.',
+		imageSrc: '/Paper2_picture.png',
+		imageAlt: 'Illustration of a courier profile and savings chart for survey-based MPC research',
+		items: [
+			'Constructs core measures including discount factors, temporary MPC, persistent MPC, and daily MPC from questionnaires',
+			'Finds that financial fragility raises MPC, but low-asset and impatient riders do not necessarily consume more',
+			'Explains low spending among target savers through a dynamic model of marriage-related saving pressure and counterfactual relief',
+		],
+	},
+	{
+		id: 'research-housing-monetary',
+		shortTitle: 'Housing Market Heterogeneity',
+		title: 'U.S. Monetary Surprises, China’s Stratified Housing Market and Asset-Reallocation Channel',
+		description:
+			'Examines how unexpected U.S. monetary tightening transmits into China’s existing-home market across cities, size bands, and price tiers.',
+		imageSrc: '/Paper3_picture.png',
+		imageAlt: 'Illustration of housing tiers and monetary shock transmission for China housing market research',
+		items: [
+			'Combines Anjuke listing prices, Lianjia transactions, and smooth local projections on high-frequency U.S. surprises',
+			'Finds larger price declines in bigger cities and in cities with deeper financial markets',
+			'Finds that larger housing units experience faster price declines and faster sales',
+		],
+	},
+	{
+		id: 'research-country-monetary',
+		shortTitle: 'Country Heterogeneity',
+		title: 'Cross-Country Heterogeneity in the International Transmission of U.S. Monetary Policy',
+		description:
+			'Studies why U.S. monetary policy shocks generate different interest-rate, industrial-production, and exchange-rate responses across countries.',
+		imageSrc: '/Paper4_picture.jpg',
+		imageAlt: 'Illustration of a globe and impulse response paths for cross-country transmission research',
+		items: [
+			'Uses country-level monthly VARs with high-frequency policy news shocks to estimate domestic impulse responses',
+			'Links response heterogeneity to financial development, inequality, capital-account openness, exchange-rate regimes, and income levels',
+			'Shows that financial structure and distribution shape both the magnitude of spillovers and the co-movement of rates and output',
+		],
+	},
+	{
+		id: 'research-balassa-samuelson',
+		shortTitle: 'Balassa-Samuelson Puzzle in China',
+		title: 'Distribution Costs and the Formation Mechanism of Chinese Interprovincial Price Differences',
+		description:
+			'Places distribution costs inside the Balassa-Samuelson framework to explain both retail law-of-one-price deviations and unstable price-level transmission across provinces.',
+		imageSrc: '/Paper5_picture.png',
+		imageAlt: 'Illustration of distribution links and provincial price differences for interprovincial price research',
+		items: [
+			'Tests the Penn effect, the BS core channel, and inflation decomposition within one unified empirical framework',
+			'Shows that distribution costs significantly explain tradable retail-price deviations across provinces',
+			'Explains why relative productivity can move sectoral relative prices without stably passing through to the overall price level',
+		],
+	},
+];
+
+const researchFramework = [
+	{
+		title: 'Economic Heterogeneity',
+		description:
+			'How differences across households and countries reshape consumption behavior and monetary policy transmission.',
+		accentClass: 'framework-track-olive',
+		nodes: [
+			{ label: 'MPC heterogeneity among households with asset threshold', href: '#research-family-mpc' },
+			{ label: 'MPC heterogeneity among food delivery riders', href: '#research-courier-mpc' },
+			{ label: 'Housing-market responses to U.S. monetary policy shocks', href: '#research-housing-monetary' },
+			{ label: 'Cross-country heterogeneity in U.S. monetary policy spillovers', href: '#research-country-monetary' },
+		],
+	},
+	{
+		title: 'Theory-Empirics Gap',
+		description:
+			'Where standard theory fails to account for the data, necessitating the development of new mechanisms.',
+		accentClass: 'framework-track-rose',
+		nodes: [
+			{ label: 'Why is MPC higher among asset-rich households?', href: '#research-family-mpc' },
+			{ label: 'Why are less patient riders associated with lower MPC?', href: '#research-courier-mpc' },
+			{ label: 'Why does Balassa-Samuelson fail across Chinese provinces?', href: '#research-balassa-samuelson' },
+		],
+	},
+];
+
+const projectAreas = [
+	{
+		tag: 'Data',
+		title: 'Lianjia Housing Transaction Data Pipeline',
+		description:
+			'A Selenium-based data collection pipeline for Lianjia housing transaction records, designed for housing market research. The project supports batch scraping by district, checkpoint resume, CAPTCHA-aware interruption handling, and structured Excel export.',
+		imageSrc: '/project-lianjia.svg',
+		imageAlt: 'Illustration for the Lianjia housing transaction data pipeline project',
+		links: [{ href: 'https://github.com/MinjieDING/Lianjia', label: 'View on GitHub' }],
+		items: [
+			'Housing transaction data collection for Lianjia city sites using Guangzhou as the working example',
+			'Checkpoint resume and partial-save workflow for long-running scraping tasks',
+			'Structured export for downstream housing market analysis and research use',
+			'For more data from other cities and longer periods, please contact me.',
+		],
+	},
+	{
+		tag: 'Data',
+		title: 'Discount Rates and MPC among Food Delivery Couriers',
+		description:
+			'A survey-based project on intertemporal choice and consumption behavior among food delivery couriers. The study asks how large discount rates and marginal propensities to consume are in practice and what personal and economic characteristics shape them.',
+		imageSrc: '/project-courier-survey.svg',
+		imageAlt: 'Illustration for the food delivery courier survey project',
+		links: [{ href: '/project-courier-survey-summary', label: 'Descriptive Statistics' }],
+		items: [
+			'Estimates discount rates from a large-scale survey of food delivery riders',
+			'Measures MPC and links it to rider characteristics and economic conditions',
+			'Based on two survey waves covering roughly 40,000 respondents',
+		],
+	},
+];
+
+const educationItems = [
+	"Master's degree in Computer Science, University of Colorado Boulder",
+	"Master's degree in Economics, Hong Kong University of Science and Technology (HKUST)",
+	"Master's degree in Finance, Peking University",
+	"Bachelor's degree in Finance, Guanghua School of Management, Peking University",
+	'Bachelor Minor in Statistics, School of Mathematical Sciences, Peking University',
+	'High School Diploma in Science, Suzhou & Haian High School of Jiangsu Province',
+];
+
+const teachingGroups = [
+	{
+		institution: 'HKUST',
+		items: [
+			{
+				text: 'Monetary Economics (ECON 5360) - ',
+				linkLabel: 'TA Notes',
+				href: 'https://5360tutorial.vercel.app/0_Tutorial_Introduction.html',
+			},
+			{ text: 'Banking and Financial Intermediation (ECON 5350)' },
+			{ text: 'Macroeconomics (ECON 2123)' },
+			{ text: 'International Macroeconomics and Finance (ECON 4374)' },
+			{ text: 'Money and Banking (ECON 4334)' },
+			{ text: 'What Economics Tells Us (ECON 1222)' },
+		],
+	},
+	{
+		institution: 'Peking University',
+		items: [
+			{ text: 'Intermediate Macroeconomics (NSD)' },
+			{ text: 'Financial Economics (GSM)' },
+			{ text: 'Financial Derivatives (GSM)' },
+		],
+	},
+];
+
+const industryExperiences = [
+	{
+		company: 'Vanke Group',
+		location: 'Beijing & Shenzhen',
+		roles: [
+			{
+				title: 'Economist',
+				period: '2019--2021',
+				bullets: [
+					'Provide research support to Vanke\'s management team.',
+					'Communicate with government departments related to macroeconomics and real estate.',
+				],
+			},
+		],
+	},
+	{
+		company: 'China International Capital Corporation (CICC)',
+		location: 'Beijing',
+		roles: [
+			{
+				title: 'Equity Analyst, Research Department',
+				period: '2017--2019',
+			},
+			{
+				title: 'Intern, Research Department',
+				period: '2015--2016',
+			},
+		],
+		bullets: [
+			{
+				text: 'Cover stocks in TMT industry, with a focus on media, movie, and TV drama industry. ',
+				linkLabel: 'Report',
+				href: 'https://mp.weixin.qq.com/s/HfG1sErvvKCBJLe0NqmhmA',
+			},
+			{
+				text: 'Then internally transferred to cover macroeconomics. ',
+				linkLabel: 'Report',
+				href: 'https://mp.weixin.qq.com/s/ojXzUaOJ8cs2DCFBFP4c9g',
+			},
+		],
+	},
+	{
+		company: 'Deloitte China',
+		location: 'Beijing',
+		roles: [
+			{
+				title: 'Intern, Audit Department',
+				period: '2014--2015',
+				bullets: ['Conduct annual audit service for listed companies in the Internet industry.'],
+			},
+		],
+	},
+];
+
+const otherGroups = [
+	{
+		title: 'Volunteer',
+		items: [
+			'I am a member of Beijing Volunteer Service Federation (BVF) since 2012.',
+			'I was volunteer for Haidian Marathon, Zhufang Migrant Workers\' Children School, etc.',
+		],
+	},
+	{
+		title: 'Hobbies',
+		items: [
+			'I am an amateur sprinter, specializing in 400m and 400m hurdles, with personal bests of 53.43 and 66.30 seconds, respectively.',
+			{
+				text: 'Several gold medals were earned in men\'s 400m, 200m, 4*100m relay race at the intramural athletics meet held by Peking University in 2011-',
+				secondaryLinkLabel: '2016',
+				secondaryHref: 'https://mp.weixin.qq.com/s/FOnbi4fMHZsjb5faJ8QG1w',
+				middleText: ', by HKUST in ',
+				linkLabel: '2023',
+				href: 'https://hkustsportsassocia.wixsite.com/su-sport/records',
+				suffix: '. And a silver medal in 400m at Beijing Capital Inter-University Autumn Athletic Meet in 2013.',
+			},
+			'Also, I am a Track & Field Coach and Level-2 Track & Field Judge certified by the Chinese Athletic Association. I hope my knowledge in physical training can help people stay healthy and energetic.',
+		],
+	},
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	title="Minjie Ding"
+	description="Academic-style personal website template built with Astro."
+>
+	<div class="page-shell">
+		<header class="hero">
+			<nav class="topbar" aria-label="Primary">
+				<a href="#research">Research</a>
+				<a href="#education">Education</a>
+				<a href="#projects">Projects</a>
+				<a href="#teaching">Teaching</a>
+				<a href="#industry">Industry</a>
+				<a href="#others">Miscellaneous</a>
+			</nav>
+
+			<div class="hero-card">
+				<div class="avatar-wrap">
+					<img src="/avatar.png" alt="Portrait of Minjie D" class="avatar" />
+				</div>
+				<div class="intro">
+					<h1>Minjie Ding</h1>
+					<p class="meta">Email: adingminjie [at] 163.com</p>
+					<p class="lead">
+						I am a researcher whose work focuses on macroeconomics and housing markets, drawing on tools from statistics and computer science.
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<main class="content">
+			<section id="research" class="panel">
+				<div class="section-heading section-heading-wide">
+					<h2>Research</h2>
+					<p>
+						My research emphasizes economic heterogeneity and seeks to bridge the gap
+						between theoretical models and empirical findings.
+					</p>
+				</div>
+				<div class="framework-map" aria-label="Research framework map">
+					{researchFramework.map((track) => (
+						<section class={`framework-track ${track.accentClass}`}>
+							<div class="framework-track-header">
+								<p class="framework-kicker">Research Line</p>
+								<h3>{track.title}</h3>
+								<p>{track.description}</p>
+							</div>
+							<div class="framework-connector" aria-hidden="true"></div>
+							<div class="framework-node-list">
+								{track.nodes.map((node) => (
+									<a class="framework-node" href={node.href}>{node.label}</a>
+								))}
+							</div>
+						</section>
+					))}
+				</div>
+				<p class="framework-note">Click any node to jump to the corresponding paper summary below.</p>
+				<div class="highlight-grid">
+					{researchAreas.map((area) => (
+						<article id={area.id} class="highlight-card highlight-card-research highlight-card-no-media">
+							<div class="highlight-copy">
+								<div class="highlight-heading-row">
+									<h3>{area.title}</h3>
+									<a class="paper-anchor-link" href={`#${area.id}`}>#</a>
+								</div>
+								<p>{area.description}</p>
+								<ul>
+									{area.items.map((item) => <li>{item}</li>)}
+								</ul>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section id="education" class="panel">
+				<div class="section-heading">
+					<h2>Education</h2>
+				</div>
+				<ul class="news-list">
+					{educationItems.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
+
+			<section id="projects" class="panel">
+				<div class="section-heading section-heading-wide">
+					<h2>Projects</h2>
+					<p>
+						These projects support my research workflow, including collecting data for empirical work and organizing code that I use repeatedly.
+					</p>
+				</div>
+				<div class="highlight-grid">
+					{projectAreas.map((area) => (
+						<article class="highlight-card">
+							<div class="highlight-media" aria-hidden={area.imageSrc ? undefined : 'true'}>
+								{area.imageSrc && <img src={area.imageSrc} alt={area.imageAlt ?? ''} loading="lazy" />}
+							</div>
+							<div class="highlight-copy">
+								<h3>
+									{area.tag && <strong class="project-tag">[{area.tag}]</strong>}
+									{area.title}
+								</h3>
+								<p>{area.description}</p>
+								<ul>
+									{area.items.map((item) => <li>{item}</li>)}
+								</ul>
+								{area.links && area.links.length > 0 && (
+									<div class="project-links">
+										{area.links.map((link) => (
+											<a class="project-link" href={link.href} target="_blank" rel="noreferrer">
+												{link.label}
+											</a>
+										))}
+									</div>
+								)}
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section id="teaching" class="panel">
+				<div class="section-heading">
+					<h2>Teaching</h2>
+					<p>I was teaching assistant for the following courses.</p>
+				</div>
+				<div class="teaching-groups">
+					{teachingGroups.map((group) => (
+						<div class="teaching-group">
+							<h3>{group.institution}</h3>
+							<ul class="news-list">
+								{group.items.map((item) => (
+									<li>
+										{item.text}
+										{item.href && item.linkLabel && (
+											<a href={item.href} target="_blank" rel="noreferrer">{item.linkLabel}</a>
+										)}
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section id="industry" class="panel">
+				<div class="section-heading">
+					<h2>Industry Experience</h2>
+				</div>
+				<div class="industry-list">
+					{industryExperiences.map((experience) => (
+						<article class="industry-item">
+							<div class="industry-header">
+								<h3>{experience.company}</h3>
+							</div>
+							<div class="industry-roles">
+								{experience.roles.map((role) => (
+									<div class="industry-role">
+										<div class="industry-role-header">
+											<p class="industry-role-title">{`${role.title} (${role.period})`}</p>
+										</div>
+										{role.bullets && (
+											<ul class="news-list industry-bullets">
+												{role.bullets.map((bullet) => <li>{bullet}</li>)}
+											</ul>
+										)}
+									</div>
+								))}
+							</div>
+							{experience.bullets && (
+								<ul class="news-list industry-bullets industry-bullets-company">
+									{experience.bullets.map((bullet) => (
+										<li>
+											{typeof bullet === 'string' ? (
+												bullet
+											) : (
+												<>
+													{bullet.text}
+													<a href={bullet.href} target="_blank" rel="noreferrer">{bullet.linkLabel}</a>
+												</>
+											)}
+										</li>
+									))}
+								</ul>
+							)}
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section id="others" class="panel publications">
+				<div class="section-heading">
+					<h2>Miscellaneous</h2>
+				</div>
+				<div class="other-groups">
+					{otherGroups.map((group) => (
+						<div class="other-group">
+							<h3>{group.title}</h3>
+							<ul class="news-list">
+								{group.items.map((item) => (
+									<li>
+										{typeof item === 'string' ? (
+											item
+										) : (
+											<>
+												{item.text}
+												{item.secondaryHref && item.secondaryLinkLabel && (
+													<a href={item.secondaryHref} target="_blank" rel="noreferrer">{item.secondaryLinkLabel}</a>
+												)}
+												{item.middleText}
+												<a href={item.href} target="_blank" rel="noreferrer">{item.linkLabel}</a>
+												{item.tailText}
+												{item.tailHref && item.tailLinkLabel && (
+													<a href={item.tailHref} target="_blank" rel="noreferrer">{item.tailLinkLabel}</a>
+												)}
+												{item.suffix}
+											</>
+										)}
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>© 2026 Minjie Ding</p>
+		</footer>
+	</div>
 </Layout>
+
+<style>
+	:global(body) {
+		font-family: 'Avenir Next', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+		color: #2d352c;
+		background: #ffffff;
+	}
+
+	:global(a) {
+		color: #7d9d57;
+		text-decoration: none;
+	}
+
+	:global(a:hover) {
+		color: #5f7f3e;
+	}
+
+	.page-shell {
+		min-height: 100vh;
+	}
+
+	.hero {
+		padding: 1.05rem 1.2rem 0.3rem;
+		background: #f5f0e7;
+	}
+
+	.topbar {
+		display: flex;
+		justify-content: center;
+		gap: 1.25rem;
+		flex-wrap: wrap;
+		margin: 0 auto 1rem;
+		max-width: 1080px;
+	}
+
+	.topbar a,
+	.link-row a,
+	.publication-links a {
+		color: #7d9d57;
+		text-decoration: none;
+	}
+
+	.hero-card,
+	.panel {
+		max-width: 1080px;
+		margin: 0 auto;
+		background: transparent;
+	}
+
+	.hero-card {
+		display: grid;
+		grid-template-columns: minmax(210px, 245px) 1fr;
+		gap: 1.45rem;
+		align-items: center;
+		padding: 1rem 0 0.45rem;
+	}
+
+	.avatar-wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	.avatar {
+		width: min(100%, 220px);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 6px solid #f4f4f1;
+		box-shadow: none;
+	}
+
+	.eyebrow,
+	.section-kicker,
+	.publication-venue {
+		margin: 0;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		font-size: 0.78rem;
+		color: #a55a57;
+	}
+
+	.intro h1,
+	.section-heading h2,
+	.highlight-card h3,
+	.publication-card h3 {
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+	}
+
+	.intro h1 {
+		margin: 0.3rem 0 0.75rem;
+		font-size: clamp(1.95rem, 4.2vw, 2.6rem);
+		line-height: 0.94;
+		color: #314234;
+	}
+
+	.meta {
+		margin: 0 0 1rem;
+		font-size: 0.98rem;
+		line-height: 1.7;
+		color: #2d352c;
+	}
+
+	.lead {
+		margin: 0;
+		font-size: 0.98rem;
+		line-height: 1.7;
+		max-width: 44rem;
+	}
+
+	.lead.secondary {
+		margin-top: 0.9rem;
+		color: #55605a;
+	}
+
+	.cv-line {
+		margin-top: 0.35rem;
+	}
+
+	.link-row {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1.6rem;
+	}
+
+	.link-row a,
+	.publication-links a {
+		padding: 0.7rem 1rem;
+		border-radius: 999px;
+		border: 1px solid rgba(84, 104, 77, 0.24);
+		background: #ffffff;
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.link-row a:hover,
+	.publication-links a:hover,
+	.topbar a:hover {
+		transform: translateY(-1px);
+		color: #5f7f3e;
+	}
+
+	.content {
+		padding: 1.1rem 1.2rem 3rem;
+		background: #ffffff;
+	}
+
+	.panel {
+		padding: 1.3rem 0;
+		margin-top: 0.7rem;
+	}
+
+	.section-heading {
+		max-width: 50rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-heading.compact {
+		margin-bottom: 0.75rem;
+	}
+
+	.section-heading-wide {
+		max-width: 1080px;
+	}
+
+	.section-heading h2 {
+		margin: 0.35rem 0 0.8rem;
+		font-size: clamp(1.8rem, 4vw, 2.5rem);
+		color: #314234;
+	}
+
+	.section-heading p {
+		margin: 0;
+		line-height: 1.8;
+	}
+
+	.news-list {
+		margin: 0;
+		padding-left: 1.25rem;
+		display: grid;
+		gap: 0.8rem;
+		line-height: 1.7;
+	}
+
+	.highlight-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1rem;
+	}
+
+	.framework-map {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.framework-track {
+		position: relative;
+		padding: 1.15rem;
+		border-radius: 0.7rem;
+		border: 1px solid #dfe5db;
+		background:
+			linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 248, 244, 0.92)),
+			#ffffff;
+		overflow: hidden;
+	}
+
+	.framework-track-olive {
+		box-shadow: inset 0 0 0 1px rgba(125, 157, 87, 0.08);
+	}
+
+	.framework-track-rose {
+		box-shadow: inset 0 0 0 1px rgba(165, 90, 87, 0.08);
+	}
+
+	.framework-track::before {
+		content: '';
+		position: absolute;
+		inset: 0 auto 0 0;
+		width: 6px;
+		background: linear-gradient(180deg, rgba(125, 157, 87, 0.9), rgba(165, 90, 87, 0.75));
+	}
+
+	.framework-track-header {
+		position: relative;
+		z-index: 1;
+	}
+
+	.framework-kicker {
+		margin: 0;
+		font-size: 0.72rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: #8d645f;
+	}
+
+	.framework-track h3 {
+		margin: 0.4rem 0 0.65rem;
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		font-size: 1.55rem;
+		color: #314234;
+	}
+
+	.framework-track p {
+		margin: 0;
+		line-height: 1.75;
+	}
+
+	.framework-connector {
+		height: 2.25rem;
+		margin-left: 0.55rem;
+		border-left: 2px solid rgba(125, 157, 87, 0.32);
+	}
+
+	.framework-node-list {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.framework-node {
+		display: block;
+		padding: 0.9rem 1rem;
+		border-radius: 0.9rem;
+		border: 1px solid rgba(84, 104, 77, 0.18);
+		background: #fcfcf8;
+		line-height: 1.55;
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.framework-node:hover {
+		transform: translateY(-1px);
+		border-color: rgba(84, 104, 77, 0.36);
+		background: #ffffff;
+	}
+
+	.framework-note {
+		margin: 0 0 1rem;
+		color: #5b615a;
+		font-size: 0.96rem;
+	}
+
+	.teaching-groups {
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	.other-groups {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.teaching-group h3 {
+		margin: 0 0 0.75rem;
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		font-size: 1.25rem;
+		color: #314234;
+	}
+
+	.other-group h3 {
+		margin: 0 0 0.75rem;
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		font-size: 1.25rem;
+		color: #314234;
+	}
+
+	.industry-list {
+		display: grid;
+		gap: 1.6rem;
+	}
+
+	.industry-item {
+		padding-bottom: 1.1rem;
+	}
+
+	.industry-item:last-child {
+		padding-bottom: 0;
+	}
+
+	.industry-header,
+	.industry-role-header {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 1rem;
+		align-items: baseline;
+	}
+
+	.industry-header h3,
+	.industry-role-title {
+		margin: 0;
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		color: #1f1f1f;
+	}
+
+	.industry-header h3 {
+		font-size: 1.35rem;
+	}
+
+	.industry-header p,
+	.industry-role-period,
+	.industry-role-title {
+		font-size: 1rem;
+	}
+
+	.industry-header p,
+	.industry-role-period {
+		margin: 0;
+		color: #2d352c;
+	}
+
+	.industry-role-period {
+		font-size: 1rem;
+	}
+
+	.industry-roles {
+		margin-top: 0.65rem;
+		display: grid;
+		gap: 0.8rem;
+	}
+
+	.industry-role {
+		padding-left: 1.5rem;
+	}
+
+	.industry-bullets {
+		margin-top: 0.45rem;
+	}
+
+	.industry-bullets-company {
+		padding-left: 2.75rem;
+	}
+
+	.highlight-card,
+	.publication-card {
+		background: #ffffff;
+		border: 1px solid #dfe5db;
+		border-radius: 0.4rem;
+	}
+
+	.highlight-card {
+		padding: 1.25rem;
+		display: grid;
+		grid-template-columns: minmax(180px, 26%) minmax(0, 1fr);
+		gap: 1.25rem;
+		align-items: stretch;
+	}
+
+	.highlight-card-no-media {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.highlight-card-no-media .highlight-copy {
+		width: 100%;
+		max-width: none;
+	}
+
+	.highlight-card-no-media .highlight-heading-row {
+		width: 100%;
+	}
+
+	.highlight-card-research {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.highlight-media {
+		min-height: 170px;
+		border-radius: 0.3rem;
+		background:
+			linear-gradient(145deg, rgba(125, 157, 87, 0.22), rgba(165, 90, 87, 0.12)),
+			#eef1e9;
+		border: 1px solid rgba(125, 157, 87, 0.18);
+		overflow: hidden;
+	}
+
+	.highlight-media img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.highlight-copy {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		align-content: start;
+	}
+
+	.highlight-card-research .highlight-media {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.highlight-card-research .highlight-media img {
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		object-position: top;
+	}
+
+	.highlight-card:not(.highlight-card-research) .highlight-media {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.highlight-card:not(.highlight-card-research) .highlight-media img {
+		max-width: 100%;
+		max-height: 100%;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	.highlight-heading-row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.75rem;
+		align-items: start;
+	}
+
+	.paper-anchor-link {
+		flex: 0 0 auto;
+		padding: 0.2rem 0.45rem;
+		border-radius: 999px;
+		border: 1px solid rgba(84, 104, 77, 0.2);
+		background: #fbfbf7;
+		font-size: 0.9rem;
+		line-height: 1;
+	}
+
+	.paper-tagline {
+		margin: -0.15rem 0 0.85rem;
+		font-size: 0.9rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #8d645f;
+	}
+
+	.project-links {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	.project-link {
+		justify-self: start;
+		padding: 0.7rem 1rem;
+		border-radius: 999px;
+		border: 1px solid rgba(84, 104, 77, 0.24);
+		background: #ffffff;
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.highlight-card h3,
+	.publication-card h3 {
+		margin: 0 0 0.7rem;
+		font-size: 1.35rem;
+		color: #334237;
+	}
+
+	.project-tag {
+		font-weight: 700;
+		margin-right: 0.35rem;
+	}
+
+	.highlight-card p,
+	.highlight-card li,
+	.publication-summary,
+	.contact-panel p {
+		line-height: 1.75;
+	}
+
+	.highlight-card ul {
+		margin: 1rem 0 0;
+		padding-left: 1.1rem;
+	}
+
+	.publication-list {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.publication-card {
+		padding: 1.25rem;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.publication-authors {
+		margin: 0 0 0.7rem;
+		color: #5b615a;
+	}
+
+	.publication-summary {
+		margin: 0;
+		max-width: 46rem;
+	}
+
+	.publication-links {
+		display: flex;
+		gap: 0.65rem;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		min-width: 12rem;
+	}
+
+	.footer {
+		padding: 0 1.5rem 2rem;
+		text-align: center;
+		color: #687268;
+		background: #ffffff;
+	}
+
+	@media (max-width: 900px) {
+		.framework-map {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-card,
+		.publication-card {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-card,
+		.publication-card {
+			display: grid;
+		}
+
+		.highlight-card {
+			grid-template-columns: 1fr;
+		}
+
+		.highlight-media {
+			min-height: 200px;
+		}
+
+		.publication-links {
+			justify-content: flex-start;
+			min-width: 0;
+		}
+
+		.industry-header,
+		.industry-role-header {
+			grid-template-columns: 1fr;
+			gap: 0.15rem;
+		}
+
+		.industry-role {
+			padding-left: 0;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero,
+		.content,
+		.footer {
+			padding-left: 0.9rem;
+			padding-right: 0.9rem;
+		}
+
+		.hero-card,
+		.panel {
+			padding: 1.25rem;
+		}
+
+		.intro h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>
