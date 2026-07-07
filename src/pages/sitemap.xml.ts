@@ -1,9 +1,11 @@
 const pages = ['', '/project-courier-survey-summary'];
 
+const site = 'https://www.minjied.com';
+
 export function GET() {
 	const urls = pages
 		.map((path) => {
-			const href = new URL(path || '/', 'https://minjied.com').toString();
+			const href = new URL(path || '/', site).toString();
 			return `<url><loc>${href}</loc></url>`;
 		})
 		.join('');
