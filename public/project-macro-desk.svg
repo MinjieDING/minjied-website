@@ -1,0 +1,93 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="40" x2="1100" y2="712" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08192B"/>
+      <stop offset="1" stop-color="#0E2942"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="120" y1="120" x2="1080" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E2438"/>
+      <stop offset="1" stop-color="#0A1B2A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="170" y1="181" x2="950" y2="181" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3CE7D0"/>
+      <stop offset="1" stop-color="#1CB2C5"/>
+    </linearGradient>
+    <filter id="shadow" x="90" y="90" width="1020" height="580" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#02111E" flood-opacity="0.38"/>
+    </filter>
+    <style>
+      .eyebrow { font: 700 24px 'Segoe UI', Arial, sans-serif; letter-spacing: 0.18em; fill: #3CE7D0; }
+      .title { font: 700 66px 'Segoe UI', Arial, sans-serif; fill: #F4F8FC; }
+      .subtitle { font: 600 27px 'Segoe UI', Arial, sans-serif; fill: #B8C6D9; }
+      .label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #ECF2F8; }
+      .small { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #A5B6C9; }
+      .chip { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #052331; }
+      .metric { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #DCEAF6; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" rx="28" fill="#F1F3EC"/>
+  <rect x="40" y="36" width="1120" height="688" rx="26" fill="url(#bg)"/>
+
+  <g opacity="0.1" stroke="#44E7D2" stroke-width="1">
+    <path d="M40 110H1160"/>
+    <path d="M40 184H1160"/>
+    <path d="M40 258H1160"/>
+    <path d="M40 332H1160"/>
+    <path d="M40 406H1160"/>
+    <path d="M40 480H1160"/>
+    <path d="M40 554H1160"/>
+    <path d="M40 628H1160"/>
+    <path d="M142 36V724"/>
+    <path d="M244 36V724"/>
+    <path d="M346 36V724"/>
+    <path d="M448 36V724"/>
+    <path d="M550 36V724"/>
+    <path d="M652 36V724"/>
+    <path d="M754 36V724"/>
+    <path d="M856 36V724"/>
+    <path d="M958 36V724"/>
+    <path d="M1060 36V724"/>
+  </g>
+
+  <text x="120" y="116" class="eyebrow">AI SKILL FOR INDUSTRY MACRO RESEARCH</text>
+  <text x="120" y="198" class="title">Macro Desk</text>
+  <text x="120" y="242" class="subtitle">Draft market-facing macro notes with a repeatable workflow.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="282" width="960" height="350" rx="24" fill="url(#panel)" stroke="#274B6A"/>
+  </g>
+
+  <g>
+    <rect x="160" y="322" width="372" height="74" rx="18" fill="#0A2032" stroke="#2D5578"/>
+    <rect x="176" y="340" width="10" height="38" rx="5" fill="#3CE7D0"/>
+    <text x="208" y="367" class="label">Research Workflow</text>
+
+    <rect x="160" y="418" width="372" height="162" rx="18" fill="#091A2A" stroke="#203D59"/>
+    <text x="188" y="460" class="small">01</text>
+    <text x="236" y="460" class="label">Preview</text>
+    <text x="188" y="500" class="small">02</text>
+    <text x="236" y="500" class="label">Commentary</text>
+    <text x="188" y="540" class="small">03</text>
+    <text x="236" y="540" class="label">Theme Brief</text>
+    <text x="188" y="580" class="small">04</text>
+    <text x="236" y="580" class="label">Weekly Report</text>
+  </g>
+
+  <g>
+    <rect x="570" y="322" width="470" height="74" rx="18" fill="url(#accent)"/>
+    <text x="604" y="368" class="chip">Macro release calendar + templates + examples</text>
+
+    <rect x="570" y="418" width="470" height="74" rx="18" fill="#0A2032" stroke="#2D5578"/>
+    <circle cx="614" cy="455" r="13" fill="#3CE7D0"/>
+    <text x="642" y="462" class="metric">China data schedule awareness</text>
+
+    <rect x="570" y="506" width="470" height="74" rx="18" fill="#0A2032" stroke="#2D5578"/>
+    <circle cx="614" cy="543" r="13" fill="#3CE7D0"/>
+    <text x="642" y="550" class="metric">Sample outputs for market research writing</text>
+  </g>
+
+  <line x1="120" y1="666" x2="448" y2="666" stroke="#3CE7D0" stroke-width="2" opacity="0.8"/>
+  <circle cx="463" cy="666" r="5" fill="#3CE7D0"/>
+  <text x="491" y="674" class="small">Documentation, calendar, and GitHub resources</text>
+</svg>

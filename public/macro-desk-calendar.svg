@@ -1,0 +1,156 @@
+<svg width="1152" height="768" viewBox="0 0 1152 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1152" y2="768" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071321"/>
+      <stop offset="1" stop-color="#0A1D31"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="48" y1="125" x2="1104" y2="701" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2036"/>
+      <stop offset="1" stop-color="#0A1829"/>
+    </linearGradient>
+    <filter id="shadow" x="36" y="113" width="1080" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020A14" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font: 700 54px 'Segoe UI', Arial, sans-serif; fill: #F4F7FB; }
+      .sub { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #33E3C8; }
+      .num { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #33E3C8; }
+      .left { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #33E3C8; }
+      .right { font: 700 23px 'Segoe UI', Arial, sans-serif; fill: #F4F7FB; }
+      .small { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #DDE6F1; }
+      .footer { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #33E3C8; }
+    </style>
+  </defs>
+
+  <rect width="1152" height="768" fill="url(#bg)"/>
+
+  <g opacity="0.1" stroke="#2ADCC7" stroke-width="1">
+    <path d="M0 32H1152"/>
+    <path d="M0 96H1152"/>
+    <path d="M0 160H1152"/>
+    <path d="M0 224H1152"/>
+    <path d="M0 288H1152"/>
+    <path d="M0 352H1152"/>
+    <path d="M0 416H1152"/>
+    <path d="M0 480H1152"/>
+    <path d="M0 544H1152"/>
+    <path d="M0 608H1152"/>
+    <path d="M0 672H1152"/>
+    <path d="M0 736H1152"/>
+    <path d="M48 0V768"/>
+    <path d="M144 0V768"/>
+    <path d="M240 0V768"/>
+    <path d="M336 0V768"/>
+    <path d="M432 0V768"/>
+    <path d="M528 0V768"/>
+    <path d="M624 0V768"/>
+    <path d="M720 0V768"/>
+    <path d="M816 0V768"/>
+    <path d="M912 0V768"/>
+    <path d="M1008 0V768"/>
+    <path d="M1104 0V768"/>
+  </g>
+
+  <text x="576" y="67" text-anchor="middle" class="title">China Macro Research Calendar · At a Glance</text>
+  <line x1="110" y1="99" x2="470" y2="99" stroke="#33E3C8" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="475" cy="99" r="4" fill="#33E3C8"/>
+  <text x="576" y="108" text-anchor="middle" class="sub">Macro Desk</text>
+  <circle cx="671" cy="99" r="4" fill="#33E3C8"/>
+  <line x1="682" y1="99" x2="1042" y2="99" stroke="#33E3C8" stroke-width="1.5" opacity="0.7"/>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="126" width="1056" height="101" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="238" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="313" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="388" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="463" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="538" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="613" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+    <rect x="48" y="688" width="1056" height="66" rx="6" fill="url(#panel)" stroke="#2A4F73"/>
+  </g>
+
+  <g>
+    <rect x="48" y="126" width="8" height="101" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="238" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="313" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="388" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="463" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="538" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="613" width="8" height="66" rx="3" fill="#33E3C8"/>
+    <rect x="48" y="688" width="8" height="66" rx="3" fill="#33E3C8"/>
+
+    <g transform="translate(64 144)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">1</text>
+      <text x="68" y="28" class="left">Month-end → month-start</text>
+      <line x1="348" y1="-4" x2="348" y2="44" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Activity / PMI</text>
+    </g>
+
+    <g transform="translate(64 252)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">2</text>
+      <text x="68" y="28" class="left">Early month</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Trade + Prices</text>
+      <text x="588" y="28" class="small">(Exports-Imports / CPI·PPI)</text>
+    </g>
+
+    <g transform="translate(64 327)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">3</text>
+      <text x="68" y="28" class="left">Mid-month (earlier)</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Credit</text>
+      <text x="455" y="28" class="small">(AFRE · Loans · Money supply)</text>
+    </g>
+
+    <g transform="translate(64 402)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">4</text>
+      <text x="68" y="28" class="left">Mid-month</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Real activity</text>
+      <text x="531" y="28" class="small">(IP · FAI · Retail; GDP in quarter months)</text>
+    </g>
+
+    <g transform="translate(64 477)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">5</text>
+      <text x="68" y="28" class="left">Mid-to-late month</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Fiscal</text>
+    </g>
+
+    <g transform="translate(64 552)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">6</text>
+      <text x="68" y="28" class="left">Late month</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Industrial profits</text>
+    </g>
+
+    <g transform="translate(64 627)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">7</text>
+      <text x="68" y="28" class="left">Weekly</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Domestic weekly</text>
+      <text x="575" y="28" class="small">(prefer Monday) + overseas/liquidity as needed</text>
+    </g>
+
+    <g transform="translate(64 702)">
+      <circle cx="31" cy="18" r="18" stroke="#33E3C8" stroke-width="2"/>
+      <text x="31" y="28" text-anchor="middle" class="num">8</text>
+      <text x="68" y="28" class="left">Full year</text>
+      <line x1="348" y1="-4" x2="348" y2="40" stroke="#2F5278" stroke-width="2"/>
+      <text x="374" y="28" class="right">Two Sessions, Politburo, CEWC, mid-year &amp; annual outlooks</text>
+    </g>
+  </g>
+
+  <line x1="52" y1="730" x2="323" y2="730" stroke="#33E3C8" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="328" cy="730" r="4" fill="#33E3C8"/>
+  <text x="576" y="738" text-anchor="middle" class="footer">Typical windows · confirm with official calendars</text>
+  <circle cx="831" cy="730" r="4" fill="#33E3C8"/>
+  <line x1="836" y1="730" x2="1100" y2="730" stroke="#33E3C8" stroke-width="1.5" opacity="0.7"/>
+</svg>
