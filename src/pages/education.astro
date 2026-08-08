@@ -1,0 +1,19 @@
+---
+import ProfileSectionLayout from '../layouts/ProfileSectionLayout.astro';
+import { educationItems } from '../data/siteData';
+---
+
+<ProfileSectionLayout
+	title="Minjie Ding | Education"
+	description="Education and training background for Minjie Ding."
+	currentPath="/education"
+	pageTitle="Education"
+	pageIntro="Academic training across computer science, economics, finance, and statistics."
+>
+	<section class="content-card">
+		<h2>Degrees and Training</h2>
+		<ul>
+			{educationItems.map((item) => <li>{item}</li>)}
+		</ul>
+	</section>
+</ProfileSectionLayout>

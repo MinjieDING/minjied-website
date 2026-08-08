@@ -1,0 +1,39 @@
+---
+import ProfileSectionLayout from '../layouts/ProfileSectionLayout.astro';
+import { otherGroups } from '../data/siteData';
+---
+
+<ProfileSectionLayout
+	title="Minjie Ding | Miscellaneous"
+	description="Volunteer work, hobbies, and other personal interests."
+	currentPath="/miscellaneous"
+	pageTitle="Miscellaneous"
+	pageIntro="Volunteer work, athletics, and other activities outside the main research profile."
+>
+	<div class="content-stack">
+		{otherGroups.map((group) => (
+			<section class="content-card">
+				<h2>{group.title}</h2>
+				<ul>
+					{group.items.map((item) => (
+						<li>
+							{typeof item === 'string' ? (
+								item
+							) : (
+								<>
+									{item.text}
+									{item.secondaryHref && item.secondaryLinkLabel && (
+										<a href={item.secondaryHref} target="_blank" rel="noreferrer">{item.secondaryLinkLabel}</a>
+									)}
+									{item.middleText}
+									<a href={item.href} target="_blank" rel="noreferrer">{item.linkLabel}</a>
+									{item.suffix}
+								</>
+							)}
+						</li>
+					))}
+				</ul>
+			</section>
+		))}
+	</div>
+</ProfileSectionLayout>

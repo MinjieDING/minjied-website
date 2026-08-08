@@ -1,0 +1,73 @@
+---
+import ProfileSectionLayout from '../layouts/ProfileSectionLayout.astro';
+import { industryExperiences } from '../data/siteData';
+---
+
+<ProfileSectionLayout
+	title="Minjie Ding | Industry Experience"
+	description="Industry experience across research, finance, and audit work."
+	currentPath="/industry"
+	pageTitle="Industry Experience"
+	pageIntro="Professional experience outside academia, organized by institution and role."
+>
+	<div class="content-stack">
+		{industryExperiences.map((experience) => (
+			<article class="content-card">
+				<h2>{experience.company}</h2>
+				<p class="location-line">{experience.location}</p>
+				<div class="role-stack">
+					{experience.roles.map((role) => (
+						<section class="role-card">
+							<h3>{role.title}</h3>
+							<p class="period-line">{role.period}</p>
+							{role.bullets && (
+								<ul>
+									{role.bullets.map((bullet) => <li>{bullet}</li>)}
+								</ul>
+							)}
+						</section>
+					))}
+				</div>
+				{experience.bullets && (
+					<ul>
+						{experience.bullets.map((bullet) => (
+							<li>
+								{typeof bullet === 'string' ? (
+									bullet
+								) : (
+									<>
+										{bullet.text}
+										<a href={bullet.href} target="_blank" rel="noreferrer">{bullet.linkLabel}</a>
+									</>
+								)}
+							</li>
+						))}
+					</ul>
+				)}
+			</article>
+		))}
+	</div>
+</ProfileSectionLayout>
+
+<style>
+	.location-line,
+	.period-line {
+		margin: 0;
+		color: #5a655a;
+	}
+
+	.role-stack {
+		display: grid;
+		gap: 0.9rem;
+		margin-top: 1rem;
+	}
+
+	.role-card {
+		padding-left: 1rem;
+		border-left: 2px solid rgba(125, 157, 87, 0.22);
+	}
+
+	.role-card h3 {
+		margin-bottom: 0.25rem;
+	}
+</style>

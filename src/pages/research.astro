@@ -1,0 +1,141 @@
+---
+import ProfileSectionLayout from '../layouts/ProfileSectionLayout.astro';
+import { researchAreas, researchFramework, siteMeta } from '../data/siteData';
+---
+
+<ProfileSectionLayout
+	title="Minjie Ding | Research"
+	description={siteMeta.description}
+	currentPath="/research"
+	pageTitle="Research"
+	pageIntro="My research emphasizes economic heterogeneity and seeks to bridge the gap between theoretical models and empirical findings."
+>
+	<div class="content-stack">
+		<div class="framework-grid">
+			{researchFramework.map((track) => (
+				<section class={`framework-track ${track.accentClass}`}>
+					<p class="framework-kicker">Research Line</p>
+					<h3>{track.title}</h3>
+					<p>{track.description}</p>
+					<div class="framework-node-list">
+						{track.nodes.map((node) => (
+							<a class="framework-node" href={node.href}>{node.label}</a>
+						))}
+					</div>
+				</section>
+			))}
+		</div>
+
+		{researchAreas.map((area) => (
+			<article id={area.id} class="content-card paper-card">
+				<div class="paper-heading-row">
+					<div>
+						<p class="paper-tagline">{area.shortTitle}</p>
+						<h2>{area.title}</h2>
+					</div>
+					<a class="paper-anchor-link" href={`#${area.id}`}>#</a>
+				</div>
+				<p>{area.description}</p>
+				<ul>
+					{area.items.map((item) => <li>{item}</li>)}
+				</ul>
+			</article>
+		))}
+	</div>
+</ProfileSectionLayout>
+
+<style>
+	.framework-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.framework-track {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.framework-track::before {
+		content: '';
+		position: absolute;
+		inset: 0 auto 0 0;
+		width: 6px;
+		background: linear-gradient(180deg, rgba(125, 157, 87, 0.9), rgba(165, 90, 87, 0.75));
+	}
+
+	.framework-track-olive {
+		box-shadow: inset 0 0 0 1px rgba(125, 157, 87, 0.08), 0 18px 36px rgba(49, 66, 52, 0.05);
+	}
+
+	.framework-track-rose {
+		box-shadow: inset 0 0 0 1px rgba(165, 90, 87, 0.08), 0 18px 36px rgba(49, 66, 52, 0.05);
+	}
+
+	.framework-kicker,
+	.paper-tagline {
+		margin: 0;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		font-size: 0.74rem;
+		color: #9a615d;
+	}
+
+	.framework-track h3 {
+		margin: 0.45rem 0 0.65rem;
+		font-size: 1.55rem;
+		color: #314234;
+	}
+
+	.framework-node-list {
+		display: grid;
+		gap: 0.7rem;
+		margin-top: 1rem;
+	}
+
+	.framework-node {
+		display: block;
+		padding: 0.85rem 1rem;
+		border-radius: 0.95rem;
+		border: 1px solid rgba(84, 104, 77, 0.18);
+		background: #fcfcf8;
+		line-height: 1.6;
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.framework-node:hover {
+		transform: translateY(-1px);
+		border-color: rgba(84, 104, 77, 0.34);
+		background: #ffffff;
+	}
+
+	.paper-card {
+		scroll-margin-top: 7rem;
+	}
+
+	.paper-heading-row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.75rem;
+		align-items: start;
+	}
+
+	.paper-anchor-link {
+		flex: 0 0 auto;
+		padding: 0.2rem 0.45rem;
+		border-radius: 999px;
+		border: 1px solid rgba(84, 104, 77, 0.2);
+		background: #fbfbf7;
+		font-size: 0.9rem;
+		line-height: 1;
+	}
+
+	@media (max-width: 900px) {
+		.framework-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

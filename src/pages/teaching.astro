@@ -1,0 +1,30 @@
+---
+import ProfileSectionLayout from '../layouts/ProfileSectionLayout.astro';
+import { teachingGroups } from '../data/siteData';
+---
+
+<ProfileSectionLayout
+	title="Minjie Ding | Teaching"
+	description="Teaching assistant experience by institution and course."
+	currentPath="/teaching"
+	pageTitle="Teaching"
+	pageIntro="Teaching assistant work grouped by institution."
+>
+	<div class="content-stack">
+		{teachingGroups.map((group) => (
+			<section class="content-card">
+				<h2>{group.institution}</h2>
+				<ul>
+					{group.items.map((item) => (
+						<li>
+							{item.text}
+							{item.href && item.linkLabel && (
+								<a href={item.href} target="_blank" rel="noreferrer">{item.linkLabel}</a>
+							)}
+						</li>
+					))}
+				</ul>
+			</section>
+		))}
+	</div>
+</ProfileSectionLayout>

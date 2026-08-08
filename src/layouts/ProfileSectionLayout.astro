@@ -1,0 +1,244 @@
+---
+import Layout from './Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { profile, siteMeta } from '../data/siteData';
+
+interface Props {
+	title: string;
+	description: string;
+	currentPath: string;
+	pageTitle: string;
+	pageIntro?: string;
+}
+
+const { title, description, currentPath, pageTitle, pageIntro } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<SiteHeader currentPath={currentPath} />
+	<div class="section-shell">
+		<aside class="profile-sidebar">
+			<div class="profile-card">
+				<div class="profile-avatar-wrap">
+					<img class="profile-avatar" src={profile.avatarSrc} alt={profile.avatarAlt} />
+				</div>
+				<h2>{profile.name}</h2>
+				<p class="profile-role">{profile.tagline}</p>
+				<ul class="profile-meta">
+					<li>{profile.email}</li>
+				</ul>
+				<a class="profile-home-link" href="/">Back to home</a>
+			</div>
+		</aside>
+
+		<main class="section-main">
+			<div class="section-page-header">
+				<p class="section-kicker">{siteMeta.title}</p>
+				<h1>{pageTitle}</h1>
+				{pageIntro && <p>{pageIntro}</p>}
+			</div>
+			<slot />
+		</main>
+	</div>
+</Layout>
+
+<style>
+	:global(body) {
+		font-family: 'Avenir Next', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+		color: #2d352c;
+		background:
+			radial-gradient(circle at top left, rgba(245, 240, 231, 0.78), transparent 28%),
+			linear-gradient(180deg, #f8f4ed 0%, #ffffff 22%);
+	}
+
+	:global(a) {
+		color: #7d9d57;
+		text-decoration: none;
+	}
+
+	:global(a:hover) {
+		color: #5f7f3e;
+	}
+
+	.section-shell {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 2rem 1.2rem 3.5rem;
+		display: grid;
+		grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+		gap: 2rem;
+	}
+
+	.profile-sidebar {
+		position: relative;
+	}
+
+	.profile-card {
+		position: sticky;
+		top: 6rem;
+		padding: 1.5rem;
+		border-radius: 1.2rem;
+		background: rgba(255, 255, 255, 0.92);
+		border: 1px solid #dfe5db;
+		box-shadow: 0 18px 36px rgba(49, 66, 52, 0.08);
+	}
+
+	.profile-avatar-wrap {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.1rem;
+	}
+
+	.profile-avatar {
+		width: min(100%, 215px);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 6px solid #f4f4f1;
+	}
+
+	.profile-card h2,
+	.section-page-header h1,
+	:global(.content-card h2),
+	:global(.content-card h3),
+	:global(.framework-track h2),
+	:global(.framework-track h3) {
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+	}
+
+	.profile-card h2 {
+		margin: 0 0 0.8rem;
+		font-size: 1.9rem;
+		color: #314234;
+	}
+
+	.profile-role {
+		margin: 0;
+		line-height: 1.8;
+		color: #4d584d;
+	}
+
+	.profile-meta {
+		margin: 1.3rem 0 0;
+		padding-left: 1.15rem;
+		display: grid;
+		gap: 0.6rem;
+		line-height: 1.6;
+		color: #465045;
+	}
+
+	.profile-home-link {
+		display: inline-flex;
+		margin-top: 1.4rem;
+		padding: 0.75rem 1rem;
+		border-radius: 999px;
+		border: 1px solid rgba(84, 104, 77, 0.24);
+		background: #fbfbf7;
+	}
+
+	.section-main {
+		display: grid;
+		gap: 1.2rem;
+	}
+
+	.section-page-header {
+		padding: 1.4rem 1.5rem;
+		border-radius: 1.2rem;
+		background: rgba(255, 255, 255, 0.92);
+		border: 1px solid #dfe5db;
+		box-shadow: 0 18px 36px rgba(49, 66, 52, 0.05);
+	}
+
+	.section-kicker {
+		margin: 0;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		font-size: 0.74rem;
+		color: #9a615d;
+	}
+
+	.section-page-header h1 {
+		margin: 0.45rem 0 0.8rem;
+		font-size: clamp(2.2rem, 4vw, 3.4rem);
+		line-height: 0.98;
+		color: #314234;
+	}
+
+	.section-page-header p {
+		margin: 0;
+		max-width: 48rem;
+		line-height: 1.8;
+		color: #4d584d;
+	}
+
+	:global(.content-card),
+	:global(.framework-track) {
+		padding: 1.35rem 1.45rem;
+		border-radius: 1.1rem;
+		background: rgba(255, 255, 255, 0.94);
+		border: 1px solid #dfe5db;
+		box-shadow: 0 18px 36px rgba(49, 66, 52, 0.05);
+	}
+
+	:global(.content-card h2),
+	:global(.content-card h3) {
+		margin: 0 0 0.85rem;
+		color: #314234;
+	}
+
+	:global(.content-card h2) {
+		font-size: 1.7rem;
+	}
+
+	:global(.content-card h3) {
+		font-size: 1.3rem;
+	}
+
+	:global(.content-card p),
+	:global(.content-card li),
+	:global(.framework-track p),
+	:global(.framework-track li) {
+		line-height: 1.8;
+		color: #435043;
+	}
+
+	:global(.content-card ul),
+	:global(.content-card ol) {
+		margin: 0.95rem 0 0;
+		padding-left: 1.2rem;
+	}
+
+	:global(.content-stack) {
+		display: grid;
+		gap: 1rem;
+	}
+
+	:global(.content-grid) {
+		display: grid;
+		gap: 1rem;
+	}
+
+	@media (max-width: 900px) {
+		.section-shell {
+			grid-template-columns: 1fr;
+		}
+
+		.profile-card {
+			position: static;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-shell {
+			padding-left: 0.9rem;
+			padding-right: 0.9rem;
+		}
+
+		.profile-card,
+		.section-page-header,
+		:global(.content-card),
+		:global(.framework-track) {
+			padding: 1.15rem;
+		}
+	}
+</style>

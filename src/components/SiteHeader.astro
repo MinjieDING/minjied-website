@@ -1,0 +1,90 @@
+---
+import { navigationItems, profile } from '../data/siteData';
+
+interface Props {
+	currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header">
+	<div class="site-header-inner">
+		<a class="site-brand" href="/">{profile.name}</a>
+		<nav class="site-nav" aria-label="Primary navigation">
+			{navigationItems.map((item) => {
+				const isActive = item.href === currentPath;
+
+				return (
+					<a class={isActive ? 'is-active' : undefined} href={item.href} aria-current={isActive ? 'page' : undefined}>
+						{item.label}
+					</a>
+				);
+			})}
+		</nav>
+	</div>
+</header>
+
+<style>
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 40;
+		backdrop-filter: blur(12px);
+		background: rgba(245, 240, 231, 0.92);
+		border-bottom: 1px solid rgba(125, 157, 87, 0.16);
+	}
+
+	.site-header-inner {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 1rem 1.2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.site-brand {
+		font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+		font-size: 1.4rem;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #314234;
+	}
+
+	.site-nav {
+		display: flex;
+		gap: 0.4rem;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
+	.site-nav a {
+		padding: 0.5rem 0.82rem;
+		border-radius: 999px;
+		color: #5d7253;
+		transition:
+			background 180ms ease,
+			color 180ms ease,
+			transform 180ms ease;
+	}
+
+	.site-nav a:hover,
+	.site-nav a.is-active {
+		background: rgba(125, 157, 87, 0.12);
+		color: #314234;
+		transform: translateY(-1px);
+	}
+
+	@media (max-width: 780px) {
+		.site-header-inner {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		.site-nav {
+			justify-content: flex-start;
+		}
+	}
+</style>
