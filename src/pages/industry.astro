@@ -16,8 +16,13 @@ import { industryExperiences } from '../data/siteData';
 				<h2>{experience.company}</h2>
 				<p class="location-line">{experience.location}</p>
 				<div class="role-stack">
-					{experience.roles.map((role) => (
-						<section class="role-card">
+					{experience.roles.map((role, index) => (
+						<section
+							class:list={[
+								'role-card',
+								index === experience.roles.length - 1 && experience.bullets && 'role-card-extended',
+							]}
+						>
 							<h3>{role.title}</h3>
 							<p class="period-line">{role.period}</p>
 							{role.bullets && (
@@ -25,25 +30,25 @@ import { industryExperiences } from '../data/siteData';
 									{role.bullets.map((bullet) => <li>{bullet}</li>)}
 								</ul>
 							)}
+							{index === experience.roles.length - 1 && experience.bullets && (
+								<ul class="role-extension-list">
+									{experience.bullets.map((bullet) => (
+										<li>
+											{typeof bullet === 'string' ? (
+												bullet
+											) : (
+												<>
+													{bullet.text}
+													<a href={bullet.href} target="_blank" rel="noreferrer">{bullet.linkLabel}</a>
+												</>
+											)}
+										</li>
+									))}
+								</ul>
+							)}
 						</section>
 					))}
 				</div>
-				{experience.bullets && (
-					<ul>
-						{experience.bullets.map((bullet) => (
-							<li>
-								{typeof bullet === 'string' ? (
-									bullet
-								) : (
-									<>
-										{bullet.text}
-										<a href={bullet.href} target="_blank" rel="noreferrer">{bullet.linkLabel}</a>
-									</>
-								)}
-							</li>
-						))}
-					</ul>
-				)}
 			</article>
 		))}
 	</div>
@@ -60,11 +65,20 @@ import { industryExperiences } from '../data/siteData';
 		display: grid;
 		gap: 0.9rem;
 		margin-top: 1rem;
+		padding-left: 1rem;
+		border-left: 2px solid rgba(125, 157, 87, 0.22);
 	}
 
 	.role-card {
-		padding-left: 1rem;
-		border-left: 2px solid rgba(125, 157, 87, 0.22);
+		padding-left: 0;
+	}
+
+	.role-card-extended {
+		padding-bottom: 0.2rem;
+	}
+
+	.role-extension-list {
+		margin-top: 1rem;
 	}
 
 	.role-card h3 {
