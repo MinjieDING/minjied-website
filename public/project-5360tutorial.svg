@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" rx="40" fill="#F6F1E7"/>
+  <rect x="56" y="56" width="1088" height="648" rx="32" fill="#F3F5EE" stroke="#D8CFBE" stroke-width="2"/>
+
+  <text x="120" y="138" fill="#9A615D" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="7">CODE</text>
+  <text x="120" y="214" fill="#314234" font-family="Georgia, serif" font-size="56" font-weight="700">Monetary Economics and</text>
+  <text x="120" y="282" fill="#314234" font-family="Georgia, serif" font-size="56" font-weight="700">Heterogeneous Agent Model</text>
+  <text x="120" y="338" fill="#586559" font-family="Arial, sans-serif" font-size="28">ECON 5360 tutorial notes with macro models, numerical methods,</text>
+  <text x="120" y="378" fill="#586559" font-family="Arial, sans-serif" font-size="28">and heterogeneous-agent applications across multiple languages.</text>
+
+  <rect x="120" y="444" width="556" height="170" rx="26" fill="#FFFDFC" stroke="#D8CFBE" stroke-width="2"/>
+  <text x="156" y="500" fill="#314A3A" font-family="Arial, sans-serif" font-size="28" font-weight="700">Tutorial Ladder</text>
+  <text x="156" y="548" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">RBC to New Keynesian to Consumption to Aiyagari to HANK</text>
+  <text x="156" y="586" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">with MATLAB, Dynare, Python, and Julia implementations</text>
+
+  <rect x="734" y="120" width="322" height="500" rx="30" fill="#314A3A"/>
+  <rect x="772" y="162" width="246" height="52" rx="18" fill="#E2C48D"/>
+  <text x="834" y="196" fill="#314A3A" font-family="Arial, sans-serif" font-size="24" font-weight="700">ECON 5360</text>
+  <rect x="772" y="244" width="246" height="86" rx="22" fill="#F7F4EC"/>
+  <text x="804" y="286" fill="#314A3A" font-family="Arial, sans-serif" font-size="24" font-weight="700">RBC</text>
+  <text x="874" y="286" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">NK</text>
+  <text x="944" y="286" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">HA</text>
+  <line x1="804" y1="312" x2="978" y2="312" stroke="#8EA48F" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="772" y="362" width="246" height="98" rx="22" fill="#0F2230"/>
+  <text x="804" y="408" fill="#3CE7D0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Languages</text>
+  <text x="804" y="444" fill="#D6E4EE" font-family="Arial, sans-serif" font-size="22">MATLAB / Dynare / Python / Julia</text>
+
+  <rect x="772" y="490" width="246" height="92" rx="22" fill="#F7F4EC"/>
+  <text x="804" y="534" fill="#314A3A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Methods</text>
+  <text x="804" y="568" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">VFI / EGM / PDE / Simulation</text>
+
+  <circle cx="228" cy="660" r="6" fill="#314A3A" fill-opacity="0.55"/>
+  <circle cx="278" cy="660" r="6" fill="#8EA48F" fill-opacity="0.55"/>
+  <circle cx="328" cy="660" r="6" fill="#E2C48D" fill-opacity="0.55"/>
+  <line x1="366" y1="660" x2="652" y2="660" stroke="#D0C6B2" stroke-width="2"/>
+</svg>

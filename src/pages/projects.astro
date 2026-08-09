@@ -12,7 +12,7 @@ import { projectAreas } from '../data/siteData';
 >
 	<div class="content-stack">
 		{projectAreas.map((area) => (
-			<article class="content-card project-card">
+			<article class:list={["content-card", "project-card", !area.imageSrc && 'project-card-no-media']}>
 				{area.imageSrc && (
 					<div class="project-media">
 						<img src={area.imageSrc} alt={area.imageAlt ?? ''} loading="lazy" />
@@ -47,6 +47,10 @@ import { projectAreas } from '../data/siteData';
 		gap: 1.25rem;
 	}
 
+	.project-card-no-media {
+		grid-template-columns: 1fr;
+	}
+
 	.project-media {
 		min-height: 170px;
 		border-radius: 0.85rem;
@@ -79,6 +83,10 @@ import { projectAreas } from '../data/siteData';
 	.project-copy {
 		display: grid;
 		align-content: start;
+	}
+
+	.project-card-no-media .project-copy {
+		max-width: none;
 	}
 
 	.project-links {

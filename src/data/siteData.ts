@@ -193,6 +193,40 @@ export const projectAreas = [
 		],
 	},
 	{
+		tag: 'Code',
+		title: 'Macro Quant Strategies',
+		description:
+			'A set of notes and code on macro quant and factor investing, organized from single-factor models to multi-factor systems, factor construction, portfolio optimization, and asset-allocation extensions.',
+		imageSrc: '/project-macro-quant.svg',
+		imageAlt: 'Illustration for the Macro Quant Strategies notes and code project',
+		links: [
+			{ href: 'https://github.com/MinjieDING/macroquant', label: 'View on GitHub' },
+			{ href: 'https://minjieding.github.io/macroquant/en/02.html', label: 'Documentation' },
+		],
+		items: [
+			'Builds the theory progressively from CAPM and classic style factors toward broader factor libraries and macro allocation ideas',
+			'Includes code examples for regression-based beta estimation, Newey-West inference, rolling windows, and empirical A-share replications',
+			'Combines conceptual notes with implementation details so the material works both as a study guide and a reusable research notebook',
+		],
+	},
+	{
+		tag: 'Code',
+		title: 'Monetary Economics and Heterogeneous Agent Model',
+		description:
+			'Tutorial notes and code for ECON 5360 Monetary Economics, covering business-cycle models, New Keynesian frameworks, numerical methods, optimal consumption, Aiyagari models, and heterogeneous-agent NK applications.',
+		imageSrc: '/project-5360tutorial.svg',
+		imageAlt: 'Illustration for the Monetary Economics and Heterogeneous Agent Model tutorial project',
+		links: [
+			{ href: 'https://github.com/MinjieDING/5360tutorial', label: 'View on GitHub' },
+			{ href: 'https://5360tutorial.vercel.app/0_Tutorial_Introduction.html', label: 'Tutorial Notes' },
+		],
+		items: [
+			'Covers RBC models in MATLAB, Dynare, Python, and Julia, giving students multiple implementation paths for the same macro framework',
+			'Extends from tractable New Keynesian setups to optimal consumption, endogenous grid methods, and Aiyagari-style heterogeneous-agent models',
+			'Adds numerical-method tutorials and algorithm comparisons so the notes function as both course support and a computational macro reference',
+		],
+	},
+	{
 		tag: 'Data',
 		title: 'Lianjia Housing Transaction Data Pipeline',
 		description:

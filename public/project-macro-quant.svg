@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" rx="40" fill="#F6F1E7"/>
+  <rect x="56" y="56" width="1088" height="648" rx="32" fill="#F3F6EE" stroke="#D8CFBE" stroke-width="2"/>
+
+  <text x="120" y="138" fill="#9A615D" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="7">CODE</text>
+  <text x="120" y="220" fill="#314234" font-family="Georgia, serif" font-size="64" font-weight="700">Macro Quant</text>
+  <text x="120" y="292" fill="#314234" font-family="Georgia, serif" font-size="64" font-weight="700">Strategies</text>
+  <text x="120" y="352" fill="#586559" font-family="Arial, sans-serif" font-size="28">Notes and code for factor investing, CAPM,</text>
+  <text x="120" y="392" fill="#586559" font-family="Arial, sans-serif" font-size="28">macro data, portfolio construction, and allocation.</text>
+
+  <rect x="120" y="458" width="278" height="142" rx="24" fill="#FFFDFC" stroke="#D8CFBE" stroke-width="2"/>
+  <text x="154" y="516" fill="#314A3A" font-family="Arial, sans-serif" font-size="26" font-weight="700">Framework</text>
+  <text x="154" y="558" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">CAPM to factors to testing</text>
+  <text x="154" y="592" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">to portfolio and allocation</text>
+
+  <rect x="456" y="132" width="600" height="206" rx="28" fill="#314A3A"/>
+  <text x="504" y="198" fill="#F6F1E7" font-family="Arial, sans-serif" font-size="28" font-weight="700">Single-Factor to Macro Quant</text>
+  <line x1="504" y1="232" x2="1018" y2="232" stroke="#D7E5D7" stroke-opacity="0.25"/>
+  <line x1="504" y1="272" x2="1018" y2="272" stroke="#D7E5D7" stroke-opacity="0.25"/>
+  <line x1="504" y1="312" x2="1018" y2="312" stroke="#D7E5D7" stroke-opacity="0.25"/>
+  <line x1="620" y1="164" x2="620" y2="322" stroke="#D7E5D7" stroke-opacity="0.2"/>
+  <line x1="736" y1="164" x2="736" y2="322" stroke="#D7E5D7" stroke-opacity="0.2"/>
+  <line x1="852" y1="164" x2="852" y2="322" stroke="#D7E5D7" stroke-opacity="0.2"/>
+  <line x1="968" y1="164" x2="968" y2="322" stroke="#D7E5D7" stroke-opacity="0.2"/>
+  <polyline points="526,292 592,248 648,272 702,236 764,194 826,170 888,200 936,222 978,218 1022,180" fill="none" stroke="#E2C48D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="526" cy="292" r="9" fill="#E2C48D"/>
+  <circle cx="702" cy="236" r="9" fill="#E2C48D"/>
+  <circle cx="888" cy="200" r="9" fill="#E2C48D"/>
+  <circle cx="1022" cy="180" r="9" fill="#E2C48D"/>
+
+  <rect x="456" y="378" width="278" height="220" rx="26" fill="#FFFDFC" stroke="#D8CFBE" stroke-width="2"/>
+  <text x="494" y="438" fill="#314A3A" font-family="Arial, sans-serif" font-size="28" font-weight="700">Core Topics</text>
+  <text x="494" y="486" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">Single-factor models</text>
+  <text x="494" y="522" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">Multi-factor systems</text>
+  <text x="494" y="558" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">Factor construction</text>
+  <text x="494" y="594" fill="#5B6E61" font-family="Arial, sans-serif" font-size="22">Optimization</text>
+
+  <rect x="772" y="378" width="284" height="220" rx="26" fill="#4F6754"/>
+  <text x="812" y="438" fill="#F6F1E7" font-family="Arial, sans-serif" font-size="28" font-weight="700">Implementation</text>
+  <text x="812" y="486" fill="#DDE8DD" font-family="Arial, sans-serif" font-size="22">Rolling beta estimation</text>
+  <text x="812" y="522" fill="#DDE8DD" font-family="Arial, sans-serif" font-size="22">Newey-West inference</text>
+  <text x="812" y="558" fill="#DDE8DD" font-family="Arial, sans-serif" font-size="22">A-share empirical examples</text>
+  <text x="812" y="594" fill="#DDE8DD" font-family="Arial, sans-serif" font-size="22">Macro allocation extensions</text>
+</svg>
