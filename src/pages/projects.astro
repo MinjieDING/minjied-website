@@ -21,7 +21,7 @@ import { projectAreas } from '../data/siteData';
 				<div class="project-copy">
 					<p class="project-tag">{area.tag}</p>
 					<h2>{area.title}</h2>
-					<p>{area.description}</p>
+					{area.description && <p>{area.description}</p>}
 					<ul>
 						{area.items.map((item) => <li>{item}</li>)}
 					</ul>
