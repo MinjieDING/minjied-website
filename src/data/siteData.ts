@@ -72,23 +72,23 @@ export const researchAreas = [
 		shortTitle: 'MPC heterogeneity among households with asset threshold',
 		title: 'Optimal Consumption under Asset Thresholds: Evidence and a Threshold HANK Model',
 		description:
-			'Uses Chinese household data and a HANK framework to study how housing, marriage, hukou, and education thresholds reshape consumption, saving, and monetary policy transmission.',
+			'Unlike standard theory, Chinese households’ propensity to consume does not decline monotonically with wealth; instead, it falls sharply in the early stage of wealth accumulation.',
 		items: [
-			'Estimates household MPC from CFPS data and finds a U-shaped pattern over income and assets rather than a monotonic decline',
-			'Uses cross-city down-payment policy variation in DID and DDD designs to identify the consumption effects of tighter thresholds',
-			'Builds a threshold HANK model in which near-threshold households save more aggressively, weakening immediate stimulus but making monetary and fiscal effects more persistent over time',
+			'Using household survey data and DID/DDD designs, I identify the core mechanism as a deep bundling of household utility with housing thresholds, and I develop a Threshold HANK model to draw policy implications.',
+			'Conventional consumption policy would subsidize those with the strongest propensity to consume; I argue instead that more attention should be paid to households whose consumption has been suppressed by social mechanisms. As reliance on land finance recedes, we should loosen the link between household utility and housing—for example, by equalizing public-service rights for renters and homeowners. Counterfactual experiments show that such reforms can unlock substantial consumption without fiscal stimulus.',
+			'Explanations of weak monetary transmission often stress the supply side, arguing that credit is overly allocated to firms; I focus on the demand side, emphasizing that because many life entitlements are tied to housing, even when credit reaches households, some families use it for aggressive saving for future house rather than consumption.',
 		],
 	},
 	{
 		id: 'research-courier-mpc',
 		shortTitle: 'MPC heterogeneity among food delivery riders',
-		title: 'Target Saving and MPC among Food Delivery Riders',
+		title: 'Target Saving and non-monotonic MPC: Evidence from Food Delivery Riders',
 		description:
-			'Uses original survey data on food delivery riders to study how time preference (patience), liquidity stress, and marriage-related target saving jointly shape consumption behavior.',
+			'I joined Meituan as a food-delivery rider since December 2025, and collected consumption data on frontline food-delivery riders through offline interviews and online surveys. I obtained demographic, financial, discount-factor, and propensity-to-consume data from more than 8,000 riders.',
 		items: [
-			'Constructs core measures including discount factors, temporary MPC, persistent MPC, and daily MPC from questionnaires',
-			'Finds that financial fragility raises MPC, but low-asset and impatient riders do not necessarily consume more',
-			'Explains low spending among target savers through a dynamic model of marriage-related saving pressure and counterfactual relief',
+			'The consumption behavior of China’s hand-to-mouth, as represented by food-delivery riders, differs markedly from standard economic theory. In particular, riders with lower discount factors (less patient) and with less wealth also have a low propensity to consume in practice, rather than the higher propensity that theory would predict.',
+			'Survey evidence shows that having a saving target is the core reason for this anomaly. Unmarried riders have the lowest propensity to consume because they are saving for marriage. Married riders at the same wealth level, by contrast, have a higher propensity to consume, consistent with theory.',
+			'Consumption policy typically targets subsidies at those with the highest propensity to consume, but groups who suppress consumption in order to save also deserve attention. Counterfactual experiments show that weakening the link between marriage and saving can unlock substantial consumption potential without fiscal subsidies.',
 		],
 	},
 	{
@@ -96,11 +96,9 @@ export const researchAreas = [
 		shortTitle: 'Housing Market Heterogeneity',
 		title: 'U.S. Monetary Surprises, China’s Stratified Housing Market and Asset-Reallocation Channel',
 		description:
-			'Examines how unexpected U.S. monetary tightening transmits into China’s existing-home market across cities, size bands, and price tiers.',
+			'People usually look only at city-wide house-price trends, but homes differ in size, location, and property rights, and prices of different types of housing can move in different ways. I collected nearly 3 million existing-home transactions from Lianjia and Anjuke across more than 40 cities to study these heterogeneous price trends.',
 		items: [
-			'Combines Anjuke listing prices, Lianjia transactions, and smooth local projections on high-frequency U.S. surprises',
-			'Finds larger price declines in bigger cities and in cities with deeper financial markets',
-			'Finds that larger housing units experience faster price declines and faster sales',
+			'Using local projections, I study how U.S. monetary policy shocks affect house prices in China. After a U.S. tightening shock, prices fall more in cities with larger economies and a higher share of finance. Larger homes also see faster price declines, and their time to sale shortens markedly.',
 		],
 	},
 	{
@@ -108,11 +106,10 @@ export const researchAreas = [
 		shortTitle: 'Country Heterogeneity',
 		title: 'Cross-Country Heterogeneity in the International Transmission of U.S. Monetary Policy',
 		description:
-			'Studies why U.S. monetary policy shocks generate different interest-rate, industrial-production, and exchange-rate responses across countries.',
+			'How do U.S. monetary tightening shocks affect other countries? The conventional view emphasizes the interest-rate channel: other countries follow with rate hikes, and output falls. Signaling theory instead argues that U.S. tightening conveys news of a stronger U.S. economy, which would raise output abroad.',
 		items: [
-			'Uses country-level monthly VARs with high-frequency policy news shocks to estimate domestic impulse responses',
-			'Links response heterogeneity to financial development, inequality, capital-account openness, exchange-rate regimes, and income levels',
-			'Shows that financial structure and distribution shape both the magnitude of spillovers and the co-movement of rates and output',
+			'Using VAR models and data for nearly 150 countries from 1995 to 2025, I find that in financially underdeveloped countries, the signaling view holds: both interest rates and output rise significantly. Inequality also shapes the output response: more unequal countries exhibit a weaker response.',
+			'The existing literature mainly studies U.S. monetary spillovers under different exchange-rate regimes. After controlling for exchange-rate regime, I further examine financial development, equality indices, and related factors.',
 		],
 	},
 	{
@@ -120,11 +117,10 @@ export const researchAreas = [
 		shortTitle: 'Balassa-Samuelson Puzzle in China',
 		title: 'Distribution Costs and the Formation Mechanism of Chinese Interprovincial Price Differences',
 		description:
-			'Places distribution costs inside the Balassa-Samuelson framework to explain both retail law-of-one-price deviations and unstable price-level transmission across provinces.',
+			'This paper uses the Balassa-Samuelson framework to explain inflation differences across Chinese provinces, but finds that the relationship does not hold stably. Provinces with faster productivity growth in tradables do not necessarily see faster growth in the overall price level.',
 		items: [
-			'Tests the Penn effect, the BS core channel, and inflation decomposition within one unified empirical framework',
-			'Shows that distribution costs significantly explain tradable retail-price deviations across provinces',
-			'Explains why relative productivity can move sectoral relative prices without stably passing through to the overall price level',
+			'In theory, tradable prices should be similar across provinces. In China, however, large cross-province differences in land rents and labor costs also drive differences in tradable prices. After controlling for these distribution costs, the Balassa-Samuelson framework holds across provinces.',
+			'This study incorporates distribution costs into tradable prices and offers a perspective for refining the Balassa-Samuelson framework.',
 		],
 	},
 ];
@@ -160,7 +156,7 @@ export const projectAreas = [
 		tag: 'AI Platform',
 		title: 'MeShare: China Macroeconomic Data Library',
 		description:
-			'A Python library for China macroeconomic data, designed as a streamlined fork of AKShare and paired with bilingual documentation for data lookup, charts, and macro analysis workflows.',
+			"A Python library for China's macroeconomic data, featuring bilingual documentation in Chinese and English for data querying, automated charting, and assisted analysis.",
 		imageSrc: '/project-meshare.svg',
 		imageAlt: 'Illustration for the MeShare China macroeconomic data library project',
 		links: [
@@ -168,16 +164,14 @@ export const projectAreas = [
 			{ href: 'https://www.meshare.xyz/en/index.html', label: 'Documentation' },
 		],
 		items: [
-			'Focused China macro data APIs spanning GDP, prices, PMI, finance, rates, bonds, and FX',
-			'Handbook and datasets organized by macro workflow from GDP to policy tracking',
-			'Bilingual docs, chart galleries, and an agent advisor built on the same pipeline',
+			"Compared to common API, MeShare focus more on China's macroeconomic data, covering GDP, prices, PMI, finance, interest rates, bonds, and foreign exchange.",
 		],
 	},
 	{
 		tag: 'AI Skill',
 		title: 'Macro Desk: Skill for Industry Macro Research Drafting',
 		description:
-			'An AI skill for automatically drafting macro research notes around China data releases. It helps structure previews, event-driven commentaries, thematic briefs, and weekly macro reports with a repeatable workflow.',
+			"An AI skill for automatically drafting macro research reports around China's data releases, covering outlooks, event commentaries, thematic briefings, and macroeconomic weekly reports.",
 		imageSrc: '/project-macro-desk.svg',
 		imageAlt: 'Illustration for the Macro Desk industry macro research drafting skill project',
 		links: [
@@ -186,17 +180,13 @@ export const projectAreas = [
 			{ href: '/macro-desk-calendar.svg', label: 'Calendar' },
 			{ href: 'https://dingminjie.substack.com/p/china-macro-strategies-twenty-cases', label: 'Narrative' },
 		],
-		items: [
-			'Automates first drafts for previews, commentaries, briefs, and weekly reports',
-			'Follows macro release calendars and reusable research templates',
-			'Documentation showcases sample outputs generated by the skill',
-		],
+		items: ['Sample reports are included in the project documentation.'],
 	},
 	{
 		tag: 'Code',
 		title: 'Macro Quant Strategies',
 		description:
-			'A set of notes and code on macro quant and factor investing, organized from single-factor models to multi-factor systems, factor construction, portfolio optimization, and asset-allocation extensions.',
+			'Notes and code on traditional factor quantitative investing and emerging macro quantitative investing.',
 		imageSrc: '/project-macro-quant.svg',
 		imageAlt: 'Illustration for the Macro Quant Strategies notes and code project',
 		links: [
@@ -204,16 +194,14 @@ export const projectAreas = [
 			{ href: 'https://minjieding.github.io/macroquant/en/02.html', label: 'Documentation' },
 		],
 		items: [
-			'Builds the theory progressively from CAPM and classic style factors toward broader factor libraries and macro allocation ideas',
-			'Includes code examples for regression-based beta estimation, Newey-West inference, rolling windows, and empirical A-share replications',
-			'Combines conceptual notes with implementation details so the material works both as a study guide and a reusable research notebook',
+			'Starting from CAPM and classical style factors, progressively expanding to a broader factor library and macro allocation strategies.',
 		],
 	},
 	{
 		tag: 'Code',
 		title: 'Monetary Economics and Heterogeneous Agent Model',
 		description:
-			'Tutorial notes and code for ECON 5360 Monetary Economics, covering business-cycle models, New Keynesian frameworks, numerical methods, optimal consumption, Aiyagari models, and heterogeneous-agent NK applications.',
+			'Notes and code on monetary economics, covering RBC models, New Keynesian frameworks, numerical methods, the Aiyagari model, and HA models.',
 		imageSrc: '/project-5360tutorial.svg',
 		imageAlt: 'Illustration for the Monetary Economics and Heterogeneous Agent Model tutorial project',
 		links: [
@@ -221,38 +209,33 @@ export const projectAreas = [
 			{ href: 'https://5360tutorial.vercel.app/0_Tutorial_Introduction.html', label: 'Tutorial Notes' },
 		],
 		items: [
-			'Covers RBC models in MATLAB, Dynare, Python, and Julia, giving students multiple implementation paths for the same macro framework',
-			'Extends from tractable New Keynesian setups to optimal consumption, endogenous grid methods, and Aiyagari-style heterogeneous-agent models',
-			'Adds numerical-method tutorials and algorithm comparisons so the notes function as both course support and a computational macro reference',
+			'RBC models are implemented using MATLAB, Dynare, Python, and Julia. Other models are implemented primarily in MATLAB.',
 		],
 	},
 	{
 		tag: 'Data',
 		title: 'Lianjia Housing Transaction Data Pipeline',
 		description:
-			'A Selenium-based data collection pipeline for Lianjia housing transaction records, designed for housing market research. The project supports batch scraping by district, checkpoint resume, CAPTCHA-aware interruption handling, and structured Excel export.',
+			'A Selenium-based web scraper for Lianjia transaction data, supporting batch scraping by district, resumable downloads, and CAPTCHA interruption handling.',
 		imageSrc: '/project-lianjia.svg',
 		imageAlt: 'Illustration for the Lianjia housing transaction data pipeline project',
 		links: [{ href: 'https://github.com/MinjieDING/Lianjia', label: 'View on GitHub' }],
 		items: [
-			'Housing transaction data collection for Lianjia city sites using Guangzhou as the working example',
-			'Checkpoint resume and partial-save workflow for long-running scraping tasks',
-			'Structured export for downstream housing market analysis and research use',
-			'For more data from other cities and longer periods, please contact me.',
+			"Lianjia's publicly listed transactions are dynamically adjusted, causing historical listings to appear and disappear inconsistently across different scraping times.",
+			'An account gets banned after scraping approximately 15,000 items on average, making the data acquisition cost relatively high. Like-minded peers are welcome to collaborate.',
 		],
 	},
 	{
 		tag: 'Data',
 		title: 'Discount Rates and MPC among Food Delivery Couriers',
 		description:
-			'A survey-based project on intertemporal choice and consumption behavior among food delivery couriers. The study asks how large discount rates and marginal propensities to consume are in practice and what personal and economic characteristics shape them.',
+			'Collected demographic, financial, discount factor, and consumption propensity data of frontline delivery riders through offline interviews and online questionnaires.',
 		imageSrc: '/project-courier-survey.svg',
 		imageAlt: 'Illustration for the food delivery courier survey project',
 		links: [{ href: '/project-courier-survey-summary', label: 'Descriptive Statistics' }],
 		items: [
-			'Estimates discount rates from a large-scale survey of food delivery riders',
-			'Measures MPC and links it to rider characteristics and economic conditions',
-			'Based on two survey waves covering roughly 40,000 respondents',
+			'Two rounds of surveys have been completed so far, covering over 30,000 respondents, with a 5 RMB cash reward offered for valid responses, yielding over 8,000 data entries.',
+			'This has successfully materialized abstract economic concepts like discount factors and consumption propensities into concrete figures, holding high research value.',
 		],
 	},
 ];
