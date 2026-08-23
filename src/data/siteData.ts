@@ -342,9 +342,9 @@ export const otherGroups = [
 	{
 		title: 'Hobbies',
 		items: [
-			"I am an amateur sprinter, specializing in 400m and 400m hurdles, with personal bests of 53.43 and 66.30 seconds, respectively.",
+			"I am an amateur sprinter, specializing in 400m and 400m hurdles, with personal bests of 53.43 seconds and 66.30 seconds, respectively.",
 			{
-				text: "Several gold medals were earned in men's 400m, 200m, 4*100m relay race at the intramural athletics meet held by Peking University in 2011-",
+				text: "Several gold medals were earned in men's 400m, 200m or 4*100m relay race at the intramural athletics meet held by Peking University in 2011-",
 				secondaryLinkLabel: '2016',
 				secondaryHref: 'https://mp.weixin.qq.com/s/FOnbi4fMHZsjb5faJ8QG1w',
 				middleText: ', by HKUST in ',
