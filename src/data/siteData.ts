@@ -350,7 +350,7 @@ export const otherGroups = [
 				middleText: ', by HKUST in ',
 				linkLabel: '2023',
 				href: 'https://hkustsportsassocia.wixsite.com/su-sport/records',
-				suffix: '. And a silver medal in 400m at Beijing Capital Inter-University Autumn Athletic Meet in 2013.',
+				suffix: '. Additionally, a silver medal was won in the 400m and a fourth-place finish in the 4*400m relay at the Beijing Capital Inter-University Autumn Athletic Meet in 2013 and 2016, respectively.',
 			},
 			'Also, I am a Track & Field Coach and Level-2 Track & Field Judge certified by the Chinese Athletic Association. I hope my knowledge in physical training can help people stay healthy and energetic.',
 		],
