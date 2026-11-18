@@ -19,7 +19,7 @@ export const navigationItems = [
 	{ href: '/research', label: 'Research' },
 	{ href: '/education', label: 'Education' },
 	{ href: '/projects', label: 'Projects' },
-	{ href: '/teaching', label: 'Teaching' },
+	// { href: '/teaching', label: 'Teaching' },
 	{ href: '/industry', label: 'Industry' },
 	{ href: '/miscellaneous', label: 'Miscellaneous' },
 ];
@@ -46,12 +46,12 @@ export const sectionCards = [
 		description:
 			'Project pages for the code, datasets, and systems that support the empirical workflow.',
 	},
-	{
-		href: '/teaching',
-		kicker: 'Teaching',
-		title: 'Courses and instructional work',
-		description: 'Teaching assistant experience grouped by institution and course.',
-	},
+	// {
+	// 	href: '/teaching',
+	// 	kicker: 'Teaching',
+	// 	title: 'Courses and instructional work',
+	// 	description: 'Teaching assistant experience grouped by institution and course.',
+	// },
 	{
 		href: '/industry',
 		kicker: 'Industry',
