@@ -16,15 +16,16 @@ export const profile = {
 
 export const navigationItems = [
 	{ href: '/', label: 'Home' },
-	{ href: '/research', label: 'Research' },
-	{ href: '/education', label: 'Education' },
-	{ href: '/projects', label: 'Projects' },
+	// { href: '/research', label: 'Research' },
+	// { href: '/education', label: 'Education' },
+	// { href: '/projects', label: 'Projects' },
 	// { href: '/teaching', label: 'Teaching' },
-	{ href: '/industry', label: 'Industry' },
-	{ href: '/miscellaneous', label: 'Miscellaneous' },
+	// { href: '/industry', label: 'Industry' },
+	// { href: '/miscellaneous', label: 'Miscellaneous' },
 ];
 
 export const sectionCards = [
+	/*
 	{
 		href: '/research',
 		kicker: 'Research',
@@ -64,6 +65,7 @@ export const sectionCards = [
 		title: 'Volunteer work, athletics, and personal interests',
 		description: 'Everything that belongs on the site but not on the home page.',
 	},
+	*/
 ];
 
 export const researchAreas = [

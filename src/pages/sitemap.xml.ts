@@ -1,4 +1,7 @@
-const pages = ['', '/project-courier-survey-summary'];
+const pages = [
+	'',
+	// '/project-courier-survey-summary',
+];
 
 const site = 'https://www.minjied.com';
 
